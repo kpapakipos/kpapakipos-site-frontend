@@ -8,7 +8,7 @@ function handleLoadError (error) {
   console.error(error)
 }
 
-function AboutMeScreen () {
+function ResumeScreen () {
   return (
     <div>
       <Document
@@ -21,4 +21,4 @@ function AboutMeScreen () {
   )
 }
 
-export default AboutMeScreen
+export default ResumeScreen

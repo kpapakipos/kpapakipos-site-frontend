@@ -1,27 +1,34 @@
 import { Paper, Tabs } from '@material-ui/core'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import AboutMeScreen from 'screens/AboutMeScreen/AboutMeScreen'
+import ResumeScreen from 'screens/ResumeScreen/ResumeScreen'
 import HomeScreen from 'screens/HomeScreen/HomeScreen'
 import PortfolioScreen from 'screens/PortfolioScreen/PortfolioScreen'
 import LinkTab from '../../components/LinkTab'
 import './App.scss'
 
 function App () {
+
+  console.log(process.env.NODE_ENV);
+  if (process.env.NODE_ENV !== 'production') {
+    var axe = require('react-axe');
+    axe(React, 1000);
+  }
+
   return (
     <BrowserRouter>
       <Paper className='page'>
-        <Tabs className='navBar'>
+        <Tabs variant='fullWidth' style={{ backgroundColor: 'rgb(221, 222, 236)' }}>
           <LinkTab label='Home' href='/' />
           <LinkTab label='Resume' href='/resume' />
           <LinkTab label='Portfolio' href='/portfolio' />
+          <LinkTab label='Facebook' href='https://facebook.com/kpapakipos' target='_blank' />
+          <LinkTab label='Twitter' href='https://twitter.com/kpapakipos' target='_blank' />
+          <LinkTab label='Github' href='https://github.com/kpapakipos' target='_blank' />
         </Tabs>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path='/resume'>
-            <AboutMeScreen />
+            <ResumeScreen />
           </Route>
           <Route path='/portfolio'>
             <PortfolioScreen />
