@@ -6,27 +6,15 @@ import './HomeScreen.scss'
 
 function HomeScreen() {
   return (
-    <Paper style={{
-      display: 'flex',
-      padding: '1em',
-      backgroundColor: 'white',
-      justifyContent: 'center',
-      flexDirection: 'column'
-    }}>
+    <Paper className='topLevel'>
       <Typography inline>
         Welcome to my homepage!
       </Typography>
       <Typography>
         I'm a mobile dev first (Swift and Java), but I also do some web stuff in Javascript and Python.
       </Typography>
-      <Box flexWrap="nowrap" p={2} style={{
-        display: 'inline-flex',
-        flexDirection: 'row',
-        backgroundColor: 'white',
-        justifyContent: 'space-between',
-        width: 'min-content'
-      }}>
-        <Box>
+      <Box flexWrap="nowrap" p={2} className='socialButtonsContainer'>
+        <Box mr={1}>
           <Button variant='contained' href='https://www.facebook.com/kpapakipos' target='_blank'>
             <FontAwesomeIcon icon={faFacebook} />
           </Button>
@@ -42,7 +30,7 @@ function HomeScreen() {
           </Button>
         </Box>
       </Box>
-    </Paper >
+    </Paper>
   )
 }
 

@@ -1,2 +1,17 @@
 @use '../../sass/colors';
 
+.topLevel {
+  display: 'flex';
+  padding: '1em';
+  background-color: 'white';
+  justify-content: 'center';
+  flex-direction: 'column';
+}
+
+.socialButtonsContainer {
+  display: 'inline-flex';
+  flex-direction: 'row';
+  background-color: 'white';
+  justify-content: 'space-between';
+  width: 'min-content';
+}
