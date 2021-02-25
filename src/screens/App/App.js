@@ -22,9 +22,6 @@ function App () {
           <LinkTab label='Home' href='/' />
           <LinkTab label='Resume' href='/resume' />
           <LinkTab label='Portfolio' href='/portfolio' />
-          <LinkTab label='Facebook' href='https://facebook.com/kpapakipos' target='_blank' />
-          <LinkTab label='Twitter' href='https://twitter.com/kpapakipos' target='_blank' />
-          <LinkTab label='Github' href='https://github.com/kpapakipos' target='_blank' />
         </Tabs>
         <Switch>
           <Route path='/resume'>
