@@ -17,8 +17,8 @@ function App () {
 
   return (
     <BrowserRouter>
-      <Paper className='page'>
-        <Tabs variant='fullWidth' style={{ backgroundColor: 'rgb(221, 222, 236)' }}>
+      <Paper>
+        <Tabs variant='fullWidth' className='navBar'>
           <LinkTab label='Home' href='/' />
           <LinkTab label='Resume' href='/resume' />
           <LinkTab label='Portfolio' href='/portfolio' />

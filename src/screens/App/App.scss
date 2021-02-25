@@ -1,14 +1,6 @@
 @use '../../sass/colors';
 
-body {
-  display: "flex";
-  flex: 1;
-  background-color: white;
-  align-items: center;
-}
-
 .navBar {
-  /*flex: 1;
-  display: "flex";
-  background-color: colors.$offWhite;*/
+  //display: flex;
+  background-color: colors.$offWhite;
 }
