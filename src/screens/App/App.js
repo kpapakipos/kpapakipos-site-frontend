@@ -1,13 +1,13 @@
-import { Paper, Tabs } from '@material-ui/core'
+import { Tabs } from '@material-ui/core'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import ResumeScreen from 'screens/ResumeScreen/ResumeScreen'
 import HomeScreen from 'screens/HomeScreen/HomeScreen'
 import PortfolioScreen from 'screens/PortfolioScreen/PortfolioScreen'
-import LinkTab from '../../components/LinkTab'
+import ResumeScreen from 'screens/ResumeScreen/ResumeScreen'
+import LinkTab from '../../components/LinkTab/LinkTab'
 import './App.scss'
 
-function App () {
+function App() {
 
   console.log(process.env.NODE_ENV);
   if (process.env.NODE_ENV !== 'production') {
@@ -17,24 +17,22 @@ function App () {
 
   return (
     <BrowserRouter>
-      <Paper>
-        <Tabs variant='fullWidth' className='navBar'>
-          <LinkTab label='Home' href='/' />
-          <LinkTab label='Resume' href='/resume' />
-          <LinkTab label='Portfolio' href='/portfolio' />
-        </Tabs>
-        <Switch>
-          <Route path='/resume'>
-            <ResumeScreen />
-          </Route>
-          <Route path='/portfolio'>
-            <PortfolioScreen />
-          </Route>
-          <Route path='/'>
-            <HomeScreen />
-          </Route>
-        </Switch>
-      </Paper>
+      <Tabs variant='fullWidth' className='navBar' textColor='white'>
+        <LinkTab label={<span className='navBarTab'>Home</span>} href='/' />
+        <LinkTab label={<span className='navBarTab'>Resume</span>} href='/resume' />
+        <LinkTab label={<span className='navBarTab'>Portfolio</span>} href='/portfolio' />
+      </Tabs>
+      <Switch>
+        <Route path='/resume'>
+          <ResumeScreen />
+        </Route>
+        <Route path='/portfolio'>
+          <PortfolioScreen />
+        </Route>
+        <Route path='/'>
+          <HomeScreen />
+        </Route>
+      </Switch>
     </BrowserRouter>
   )
 }

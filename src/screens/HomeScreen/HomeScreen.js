@@ -1,20 +1,20 @@
 import { faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Box, Button, Paper, Typography } from '@material-ui/core'
+import { Box, Button, Typography } from '@material-ui/core'
 import React from 'react'
 import './HomeScreen.scss'
 
 function HomeScreen() {
   return (
-    <Paper className='topLevel'>
+    <div className='topLevel'>
       <Typography inline>
         Welcome to my homepage!
       </Typography>
       <Typography>
-        I'm a mobile dev first (Swift and Java), but I also do some web stuff in Javascript and Python.
+        I'm a mobile dev first (Swift on iOS and Java on Android), but I'm learning to make websites in Javascript and Python.
       </Typography>
       <Box flexWrap="nowrap" p={2} className='socialButtonsContainer'>
-        <Box mr={1}>
+        <Box>
           <Button variant='contained' href='https://www.facebook.com/kpapakipos' target='_blank'>
             <FontAwesomeIcon icon={faFacebook} />
           </Button>
@@ -30,7 +30,7 @@ function HomeScreen() {
           </Button>
         </Box>
       </Box>
-    </Paper>
+    </div>
   )
 }
 
