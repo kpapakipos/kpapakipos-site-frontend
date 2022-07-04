@@ -1,4 +1,4 @@
-import { Button, Grid, Paper, Typography } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 import PortfolioRow from 'components/PortfolioRow/PortfolioRow'
 import './PortfolioScreen.scss'
 
