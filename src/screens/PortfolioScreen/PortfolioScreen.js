@@ -1,3 +1,4 @@
+import React from 'react';
 import { Paper } from '@material-ui/core'
 import PortfolioRow from 'components/PortfolioRow/PortfolioRow'
 import './PortfolioScreen.scss'
