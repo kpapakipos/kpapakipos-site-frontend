@@ -15,16 +15,6 @@ function HomeScreen() {
       </Typography>
       <Box flexWrap="nowrap" p={2} className='socialButtonsContainer'>
         <Box>
-          <Button variant='contained' href='https://www.facebook.com/kpapakipos' target='_blank'>
-            <FontAwesomeIcon icon={faFacebook} />
-          </Button>
-        </Box>
-        <Box mx={1}>
-          <Button variant='contained' href='https://www.twitter.com/kpapakipos' target='_blank'>
-            <FontAwesomeIcon icon={faTwitter} />
-          </Button>
-        </Box>
-        <Box>
           <Button variant='contained' href='https://www.github.com/kpapakipos' target='_blank'>
             <FontAwesomeIcon icon={faGithub} />
           </Button>
